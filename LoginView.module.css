@@ -1,0 +1,67 @@
+:root {
+  --primary: #000000;
+  --secondary: #ffffff;
+  --accent: #ff5e5b;
+}
+
+.signInContainer {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  min-height: 100vh;       /* full viewport height */
+  background-color: var(--secondary);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.loginForm {
+  all: unset;
+  width: 100%;
+  max-width: 400px;        /* limits form width */
+  padding: 30px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  background-color: var(--secondary);
+  box-sizing: border-box;  /* includes padding in width */
+  
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+input {
+  width: 100%;            /* make inputs full width */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-left: 0%;
+}
+
+button {
+  width: 100%;            /* make button full width */
+  padding: 12px;
+  background-color: var(--accent);
+  color: var(--secondary);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e65552; /* slightly darker accent */
+}

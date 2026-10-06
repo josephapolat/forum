@@ -1,0 +1,28 @@
+.postContainer{
+    width: 50vw;
+    height: 100vh;
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
+.post{
+    width: 100%;
+    height: 10vh;
+    border: 1px solid black;
+    margin-top: 5%;
+    
+}
+.title{
+    background-color: #EBEBEB;
+    display: inline-block;
+    padding: 5px;
+    margin-left: 2%;
+}
+.author{
+    display: flex;
+    margin-top: -2%;
+    margin-left: 2%;
+    color: blue;
+}
+NavLink{
+    color: black;
+}

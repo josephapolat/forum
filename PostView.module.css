@@ -1,0 +1,41 @@
+.postContainer{
+    display: flex;
+    flex-direction: column; /* ✅ stack child elements vertically */
+    width: 90vw;            /* remove space between 90 and vw */
+    margin: auto;
+    justify-content: flex-start; /* optional: top align content */
+    gap: 10px;
+
+}
+.title{
+    text-decoration: underline;
+    text-transform: lowercase;
+}
+.title::first-letter{
+    text-transform: uppercase;
+}
+.body{ /* horizontally center the body text */
+    font-style: italic;
+}
+.replyContainer{
+    display: flex;
+    flex-direction: column; /* ✅ vertical stacking */
+    gap: 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.replyAuthor{
+    text-decoration: overline;
+    
+}
+.replyBody{
+    font-style: italic;
+}
+.replyButton{
+    all: unset;
+    width: 5%;
+    height: 5%;
+}
+.replyButton:hover{
+    all: unset;
+}
