@@ -2,14 +2,11 @@ FROM maven:3.9.9-eclipse-temurin-17 AS build
 
 WORKDIR /app
 
-COPY pom.xml .
-COPY *.java .
+COPY . .
 
-RUN mkdir -p src/main/java src/main/resources
+RUN mkdir -p src/main/java
 
 RUN cp *.java src/main/java/
-
-RUN cp application.properties src/main/resources/
 
 RUN rm -f src/main/java/*Test.java
 
