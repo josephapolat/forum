@@ -18,6 +18,6 @@ WORKDIR /app
 
 COPY --from=build /app/target/*.jar app.jar
 
-EXPOSE 9000
+EXPOSE 10000
 
 CMD ["java", "-jar", "app.jar"]
