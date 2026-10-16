@@ -1,6 +1,6 @@
 import { useEffect, useContext } from 'react';
 import { Navigate } from 'react-router-dom';
-import { UserContext } from '../context/UserContext';
+import { UserContext } from '/UserContext.jsx';
 import axios from 'axios';
 
 export default function LogoutView() {
