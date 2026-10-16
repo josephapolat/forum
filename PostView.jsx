@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, useParams, useNavigate } from 'react-router-dom';
-import ReplyBox from '../../components/ReplyBox/ReplyBox';
+import ReplyBox from '/ReplyBox.jsx';
 import styles from './PostView.module.css';
 
 export default function PostView() {
