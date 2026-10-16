@@ -26,7 +26,7 @@ export default function CreatePostView() {
     }
 
     try {
-      const response = await fetch('http://localhost:9000/posts', {
+      const response = await fetch('/posts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
