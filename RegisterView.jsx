@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import Notification from '../../components/Notification/Notification';
-import AuthService from '../../services/AuthService';
+import Notification from '/Notification.jsx';
+import AuthService from '/AuthService.js';
 
 import styles from './RegisterView.module.css';
 
