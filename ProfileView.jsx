@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { UserContext } from '../../context/UserContext';
-import AuthService from '../../services/AuthService';
+import { UserContext } from '/UserContext.jsx';
+import AuthService from '/AuthService.js';
 import styles from './ProfileView.module.css';
 
 export default function ProfileView() {
