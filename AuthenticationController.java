@@ -145,7 +145,7 @@ public class AuthenticationController {
         }
     }
 
-    @RequestMapping(path = "/", method = RequestMethod.GET)
+    @RequestMapping(path = "/api/posts", method = RequestMethod.GET)
     public List<Post> loadHome() {
         return postDao.getRandomPosts(10);
     }
