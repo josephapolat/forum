@@ -39,7 +39,7 @@ export default function LoginView() {
         localStorage.setItem('user', JSON.stringify(user));
         localStorage.setItem('token', token);
 
-      er
+  
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
 
