@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NavBar from './components/NavBar/NavBar';
-import ProfileView from './views/ProfileView/ProfileView';
-import LoginView from './views/LoginView/LoginView';
-import LogoutView from './views/LogoutView';
-import RegisterView from './views/RegisterView/RegisterView';
-import HomeView from './views/HomeView/HomeView';
-import PostView from './views/PostView/PostView';
-import CreatePostView from './views/CreatePostView/CreatePostView';
-import { UserContext } from './context/UserContext';
+import NavBar from '/NavBar.jsx';
+import ProfileView from '/ProfileView.jsx';
+import LoginView from '/LoginView.jsx';
+import LogoutView from '/LogoutView.jsx';
+import RegisterView from '/RegisterView.jsx';
+import HomeView from '/HomeView.jsx';
+import PostView from '/PostView.jsx';
+import CreatePostView from '/CreatePostView.jsx';
+import { UserContext } from '/UserContext.jsx';
 import axios from 'axios';
 
 export default function App() {
