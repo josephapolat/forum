@@ -93,7 +93,49 @@ public class AuthenticationController {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "User registration failed: " + e.getMessage());
         }
     }
+@ResponseStatus(HttpStatus.CREATED)
+@RequestMapping(path = "/register", method = RequestMethod.POST)
+public User register(@Valid @RequestBody RegisterUserDto newUser) {
+    try {
+        if (userDao.getUserByUsername(newUser.getUsername()) != null) {
+            throw new ResponseStatusException(
+                HttpStatus.BAD_REQUEST, "Username already exists."
+            );
+        }
 
+        if (newUser.getPassword() == null ||
+            newUser.getEmail() == null ||
+            newUser.getLocation() == null) {
+            throw new ResponseStatusException(
+                HttpStatus.BAD_REQUEST, "Missing required registration fields."
+            );
+        }
+
+        User user = userDao.createUser(new User(
+            newUser.getUsername(),
+            newUser.getPassword(),
+            newUser.getRole() != null ? newUser.getRole() : "USER",
+            newUser.getEmail(),
+            newUser.getLocation()
+        ));
+
+        Profile profile = new Profile();
+        profile.setUserId(user.getId());
+        profile.setNickname(user.getUsername());
+        profile.setBio("");
+
+        profileDao.createProfile(profile);
+
+        return user;
+
+    } catch (DaoException e) {
+        System.err.println("Registration error: " + e.getMessage());
+        throw new ResponseStatusException(
+            HttpStatus.INTERNAL_SERVER_ERROR,
+            "User registration failed: " + e.getMessage()
+        );
+    }
+}
 
     @RequestMapping(path = "/profile", method = RequestMethod.GET)
     public Profile loadCurrentUserProfile() {
