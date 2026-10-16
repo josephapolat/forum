@@ -1,8 +1,8 @@
 import { useContext, useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Notification from '../../components/Notification/Notification';
-import AuthService from '../../services/AuthService';
-import { UserContext } from '../../context/UserContext';
+import Notification from '/Notification.jsx';
+import AuthService from '/AuthService.js';
+import { UserContext } from '/UserContext.jsx';
 import axios from 'axios';
 
 import styles from './LoginView.module.css';
