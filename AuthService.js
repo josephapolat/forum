@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:9000';
+const API_URL = '';
 
 export default {
   login(user) {
@@ -21,7 +21,7 @@ export default {
 
 
   getProfileByUsername(username) {
-    return axios.get(`http://localhost:9000/profile/${encodeURIComponent(username)}`, {
+    return axios.get(`${API_URL}/profile/${encodeURIComponent(username)}`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }
