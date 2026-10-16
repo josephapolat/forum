@@ -11,7 +11,7 @@ export default function HomeView() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://localhost:9000/')
+    fetch('/api/posts')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to load posts');
