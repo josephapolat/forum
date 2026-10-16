@@ -19,7 +19,7 @@ export default function PostView() {
   }, []);
 
   useEffect(() => {
-    fetch(`${API_URL}/posts/${postId}`)
+    fetch(`/posts/${postId}`)
       .then((res) => {
         if (!res.ok) throw new Error('Failed to load post');
         return res.json();
@@ -45,7 +45,7 @@ export default function PostView() {
   
     try {
 
-      const response = await fetch(`${API_URL}/posts/${postId}/replies`, {
+      const response = await fetch(`/posts/${postId}/replies`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
