@@ -40,9 +40,24 @@ public class JdbcProfileDao implements ProfileDao{
 
     @Override
     public Profile createProfile(Profile newProfile) {
-        return null;
+        String sql = "INSERT INTO profile (user_id, nickname, bio) " +
+                     "VALUES (?, ?, ?) RETURNING profile_id";
+    
+        try {
+            Integer profileId = jdbcTemplate.queryForObject(
+                sql,
+                Integer.class,
+                newProfile.getUserId(),
+                newProfile.getNickname(),
+                newProfile.getBio()
+            );
+    
+            newProfile.setProfileId(profileId);
+            return newProfile;
+        } catch (CannotGetJdbcConnectionException e) {
+            throw new DaoException("Unable to connect to server or database", e);
+        }
     }
-
     @Override
     public Profile getProfileByUserId(int userId) {
         Profile profile = null;
