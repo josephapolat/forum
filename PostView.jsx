@@ -81,7 +81,7 @@ export default function PostView() {
       <div className={styles.post}>
         <h2 className={styles.title}>{post.title}</h2>
         <NavLink to={`/profile/${post.author}`}>
-          <h5 className={styles.author}>{post.author}</h5>
+          <h5 className={styles.author}>User: {post.author}</h5>
         </NavLink>
         <p className={styles.body}>{post.body}</p>
 
