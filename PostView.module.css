@@ -1,9 +1,9 @@
 .postContainer{
     display: flex;
-    flex-direction: column; /* ✅ stack child elements vertically */
-    width: 90vw;            /* remove space between 90 and vw */
+    flex-direction: column;
+    width: 90vw;           
     margin: auto;
-    justify-content: flex-start; /* optional: top align content */
+    justify-content: flex-start; 
     gap: 10px;
 
 }
@@ -14,12 +14,12 @@
 .title::first-letter{
     text-transform: uppercase;
 }
-.body{ /* horizontally center the body text */
+.body{
     font-style: italic;
 }
 .replyContainer{
     display: flex;
-    flex-direction: column; /* ✅ vertical stacking */
+    flex-direction: column;
     gap: 10px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
