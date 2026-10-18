@@ -18,12 +18,6 @@ export default function NavBar() {
 
   return (
     <nav>
-      <input type="text" />
-
-      <NavLink to="/">
-        <div className={styles.searchButton}>search</div>
-      </NavLink>
-
       <NavLink to="/">
         <div className={styles.homeButton}>
           <span className={styles.text}>HOME</span>
